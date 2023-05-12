@@ -1,0 +1,40 @@
+ville : nomville
+route : nomroute,distance
+portion : idroute,debut,fin,etat
+detaileroute : idroute,idvilledep,idvillearrive
+
+Adminstrateur: emailadmin,passwordadmin
+User: iduser,emailUser,passwordUser
+
+
+TO DO List:
+    -Login
+    
+    -Crud route              +
+    
+    
+    -Ajout et liste portion  ++
+    
+        Scenario:
+            add portion
+            pkdebut:        pkfin:     etat
+    
+        contrainte(regle de gestion)
+            -Tsy afaka manampy pkdebut ou pkfin ao amle intervalle existant 
+    
+
+    -Crud user               +
+    
+    
+    -Afficher le budget pour entretien des portions ++ 
+
+        Exemple
+        RN2
+            Portion     Etat    pkdebut      pkfin      Budget entretien        Dure de l'entretien
+            1             2         20          50          10M                     24semaine
+
+        Etape
+            -Get : Etat 
+                   distance
+            -budget = distance * 30M            Selon l'Etat
+            -duree = distance * nbre semaine    Selon l'Etat
